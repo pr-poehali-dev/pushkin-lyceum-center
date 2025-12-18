@@ -3,24 +3,6 @@ import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
 
 const Index = () => {
-  const galleryImages = [
-    {
-      url: "https://cdn.poehali.dev/projects/f09ac29b-1286-48b6-8c46-56d927457b69/files/f3cdeb75-9bc3-436a-b666-b48bf78b7f46.jpg",
-      title: "Александр Сергеевич Пушкин",
-      description: "Портрет великого поэта"
-    },
-    {
-      url: "https://cdn.poehali.dev/projects/f09ac29b-1286-48b6-8c46-56d927457b69/files/b29fd15b-ba1b-42cf-8b0a-8b13b068ab90.jpg",
-      title: "Архивный документ",
-      description: "Рукопись из Царскосельского лицея"
-    },
-    {
-      url: "https://cdn.poehali.dev/projects/f09ac29b-1286-48b6-8c46-56d927457b69/files/146a00c9-84d3-4cf8-82d4-b1e263d701f1.jpg",
-      title: "Лицеисты",
-      description: "Воспитанники Царскосельского лицея"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 paper-texture">
@@ -160,37 +142,6 @@ const Index = () => {
               </p>
             </div>
           </Card>
-        </div>
-      </section>
-
-      <section className="py-20 px-4 sm:px-6 lg:px-8 paper-texture">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center gap-3 mb-12 animate-fade-in">
-            <Icon name="Image" size={32} className="text-secondary" />
-            <h2 className="text-5xl font-bold text-primary">Галерея портретов</h2>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {galleryImages.map((image, index) => (
-              <Card 
-                key={index} 
-                className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105 animate-scale-in border-2 vintage-border"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="aspect-[3/4] overflow-hidden bg-muted">
-                  <img 
-                    src={image.url} 
-                    alt={image.title}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6 bg-card">
-                  <h3 className="text-2xl font-bold mb-2 text-primary">{image.title}</h3>
-                  <p className="text-muted-foreground">{image.description}</p>
-                </div>
-              </Card>
-            ))}
-          </div>
         </div>
       </section>
 
